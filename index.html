@@ -11,7 +11,7 @@
     <title>Resident Management</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <a href="#" class="navbar-brand">Resident Management</a>
         <button class="navbar-toggler collapsed" data-toggle="collapse" data-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
@@ -50,8 +50,8 @@
     </nav>
 
     <main class="p-4">
-        <div class="row">
-            <div class="col-3 bg-light rounded px-3 pt-3 mr-4 ml-2">
+        <div class="navigation-view d-flex mb-4">
+            <div class="side-navbar bg-light rounded p-3 mr-4">
                 <ul class="list-unstyled mb-3">
                     <li class="text-muted text-uppercase"><i class="fas fa-wrench"></i>&nbsp;administration</li>
                     <li><a href="#" class="text-success text-capitalize">users</a></li>
@@ -70,13 +70,81 @@
                     <li><a href="#" class="text-success text-capitalize">logout</a></li>
                 </ul>
             </div>
-            <div class="col jumbotron mr-2 mb-0 px-5">
+            <div class="side-jumbo jumbotron mb-0 px-5">
                 <h1 class="display-3 font-weight-bold text-capitalize">welcome, admin</h1>
                 <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat fugit delectus ipsum consequatur. Dolore autem tenetur dolorum, dolorem exercitationem minus. At voluptate ea dicta incidunt excepturi reiciendis commodi possimus architecto? At voluptate ea dicta incidunt excepturi</p>
                 <a href="#" class="btn btn-success text-capitalize">manage users</a>
             </div>
         </div>
 
+        <div class="d-flex">
+            <div class="anonymous-view">&nbsp;</div>
+            <div class="data-view">
+                <div class="statistic-view row">
+                    <div class="category col-3">
+                        <h5 class="text-capitalize font-weight-bold mb-0">total users</h5>
+                        <span class="badge badge-dark">420</span>
+                    </div>
+                    <div class="category col-3">
+                        <h5 class="text-capitalize font-weight-bold mb-0">new users today</h5>
+                        <span class="badge badge-dark">69</span>
+                    </div>
+                    <div class="category col-3">
+                        <h5 class="text-capitalize font-weight-bold mb-0">pending</h5>
+                        <span class="badge badge-dark">96</span>
+                    </div>
+                    <div class="category col-3">
+                        <h5 class="text-capitalize font-weight-bold mb-0">roles</h5>
+                        <span class="badge badge-dark">3</span>
+                    </div>
+                </div>
+
+                <h2 class="text-capitalize font-weight-bold mt-5 mb-0">
+                    pending users
+                    <span class="h5 d-inline-block text-muted">Approve or Reject</span>
+                </h2>
+
+                <hr>
+
+                <table class="table table-bordered table-hover mt-4">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>City</th>
+                            <th>Role</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Dương Thanh Tân</td>
+                            <td>fckmyass@gmail.com</td>
+                            <td>0942-xxx-xxx</td>
+                            <td>Hồ Chí Minh</td>
+                            <td>God</td>
+                            <td class="text-center"><span class="badge badge-danger">Active</span></td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Mã Minh Quân</td>
+                            <td>lolicon@gmail.com</td>
+                            <td>0122-xxx-xxx</td>
+                            <td>Mẫu Quốc</td>
+                            <td>Pedobear</td>
+                            <td class="text-center"><span class="badge badge-danger">Inactive</span></td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
     </main>
 
 
