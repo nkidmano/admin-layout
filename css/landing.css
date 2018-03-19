@@ -27,18 +27,31 @@
     }
 }
 
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-5rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
 .header {
     background-image: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url("../img/bg.jpg");
     background-size: cover;
     background-position: bottom;
     height: 100vh;
+    position: relative;
 }
 
 .content {
     display: flex;
     justify-content: space-around;
 
-    position: relative;
+    width: 100%;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -82,4 +95,77 @@
     margin-bottom: 0;
     font-size: 1.35rem;
     font-weight: 300;
+}
+
+.footer-mobile {
+    display: none;
+    height: 10vh;
+}
+
+.text-box__group--mobile {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.text-box__paragraph-box--mobile {
+    margin-left: 1rem;
+}
+
+.text-box__paragraph--mobile {
+    margin-bottom: 0;
+}
+
+/* ================================ */
+/* MEDIA */
+/* ================================ */
+/* bp-lg: 68.75em = 1100px */
+/* bp-md: 56.25em = 900px */
+/* bp-sm: 43.75em = 700px */
+/* bp-xm: 31.25em = 500px */
+
+@media only screen and (max-width: 68.75em) {
+    html {
+        font-size: 85%;
+    }
+}
+
+@media only screen and (max-width: 56.25em) {
+    html {
+        font-size: 75%;
+    }
+    .text-box {
+        padding: 2rem;
+    }
+}
+
+@media only screen and (max-width: 43.75em) {
+    .header {
+        background-position: left;
+        height: 90vh;
+    }
+    .content {
+        display: block;
+    }
+    .logo-box {
+        animation: fadeIn 1s ease-out;
+        text-align: center;
+    }
+    .logo-box__subtitle {
+        display: none;
+    }
+    .text-box {
+        display: none;
+    }
+    .footer-mobile {
+        display: flex;
+        justify-content: space-around;
+        font-size: 1.3rem;
+    }
+}
+
+@media only screen and (max-width: 31.25em) {
+    html {
+        font-size: 60%;
+    }
 }
